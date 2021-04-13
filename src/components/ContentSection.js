@@ -4,10 +4,11 @@ import {AiOutlineControl} from 'react-icons/ai'
 import {FaMoneyBillAlt} from 'react-icons/fa'
 import {GrDocumentTime} from 'react-icons/gr'
 import Jason from "../images/jason.jpg";
+
 const ContentSection = () => {
   return (
     <>
-      <Container fluid className="nisupport-section">
+      <Container fluid className="white-section">
         <Container>
           <h2 className="title">What is niSupport?</h2>
           <p>
@@ -20,29 +21,29 @@ const ContentSection = () => {
           </p>
         </Container>
       </Container>
-      <Container fluid className="everyone-section">
+      <Container fluid className="gray-section">
         <Container>
           <h2 className="title">niSupport is for everyone who creates music</h2>
           <Row>
-            <Col md={6} className="nisupport-leftsection">
+            <Col md={6} className="white-leftsection">
               <p>
                 Connect directly and build community with your most engaged
                 fans. Test new work in a supportive environment. Establish a
                 reliable, recurring revenue stream.
               </p>
-              <Button className="btn-custom"> Get Started</Button>
+              <Button className="btn-custom mb-3"> Get Started</Button>
             </Col>
-            <Col md={6} className="nisupport-leftsection">
+            <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
             </Col>
           </Row>
         </Container>
       </Container>
-      <Container fluid className="nisupport-section">
+      <Container fluid className="white-section">
         <Container>
           <h2 className="title">Why should musicians use membership?</h2>
           <Row>
-            <Col className="card-items">
+            <Col md={4} className="card-items">
               <span><FaMoneyBillAlt/></span>
               <h4>Predictable & sustainable revenue</h4>
               <p>
@@ -50,14 +51,14 @@ const ContentSection = () => {
                 each month.
               </p>
             </Col>
-            <Col className="card-items">
+            <Col md={4} className="card-items">
               <span><AiOutlineControl/></span>
               <h4>Retain full control</h4>
               <p>
               Still want to run ads, do brand deals, or work with sponsors? Cool with us!
               </p>
             </Col>
-            <Col className="card-items">
+            <Col md={4} className="card-items">
               <span><GrDocumentTime/></span>
               <h4>Your music, your schedule</h4>
               <p>
@@ -67,13 +68,13 @@ const ContentSection = () => {
           </Row>
         </Container>
       </Container>
-      <Container fluid className="everyone-section">
+      <Container fluid className="gray-section">
         <Container style={{paddingTop: "3rem"}}>
           <Row>
-          <Col md={6} className="nisupport-leftsection">
+          <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
             </Col>
-            <Col md={6} className="nisupport-leftsection">
+            <Col md={6} className="white-leftsection">
               <p style={{fontFamily: "Hi Melody", fontSize: "1.5rem"}}>
               "Like all recording artists, I've kept my eye on what creative tools the internet might afford. Patreon is unique; it's a platform that interests me. I've spent an entire career traveling, coming to your towns to play music. Now I'm inviting you to my place."
               </p>
