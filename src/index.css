@@ -113,6 +113,9 @@ body {
   background-color: #21c7eb !important;
   border: none !important;
   outline: none !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 2rem !important;
+  text-align: center;
 }
 .btn-custom:hover {
   background-color: #25b7d4 !important;
@@ -175,4 +178,22 @@ body {
   text-align: center;
   padding: 1rem;
   color: #505050;
+}
+
+.register-wrapper{
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resetpassword-wrapper{
+  width: 100%;
+  min-height: 80vh;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }

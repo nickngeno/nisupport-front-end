@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, Form, Button, FormControl } from "react-bootstrap";
+import {Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import {FaSearch} from 'react-icons/fa'
 
 const Navigation = () => {
@@ -13,15 +13,16 @@ const Navigation = () => {
             <Nav.Link href="/">About</Nav.Link>
             <Nav.Link href="/contensection">Pricing</Nav.Link>
             <Nav.Link href="/contensection">Community</Nav.Link>
-            <Nav.Link href="/footer">Footer</Nav.Link>
+            
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search artist" className="mr-sm-2" />
             <FaSearch style={{ cursor:"pointer"}} />
           </Form>
           <Nav className="">
-            <Nav.Link href="#home">Login</Nav.Link>
-            <Button className="btn-custom" variant="ml-2 mr-4">Register</Button>
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/register" className="btn-custom">Register</Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>
