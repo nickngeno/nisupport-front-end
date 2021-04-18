@@ -1,18 +1,18 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import heroImg from "../images/tony-rojas.jpg";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <div className="hero-section">
       <Container className="herowrapper">
         <Row>
           <Col md={6} className="heroLeft">
-            <h2 className="title">
+            <span className="title">
               The largest community of Music enthuasiasts
-            </h2>
-            <h4>Why not get engaged to your real fans?</h4>
-            <Button className="btn-custom mt-2">GetStarted </Button>
+            </span>
+            <p>Why not get engaged to your real fans?</p>
+            <a href="/" className="btn-custom link">Get Started</a>
           </Col>
           <Col md={6} className="heroRight">
             <img

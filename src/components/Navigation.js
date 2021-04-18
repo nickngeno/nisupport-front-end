@@ -22,7 +22,6 @@ const Navigation = () => {
           <Nav className="">
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/register" className="btn-custom">Register</Nav.Link>
-            
           </Nav>
         </Navbar.Collapse>
       </Navbar>

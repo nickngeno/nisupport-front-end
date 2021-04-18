@@ -4,8 +4,8 @@ import { Container, Form, Row, Col, Button } from "react-bootstrap";
 const PasswordReset = () => {
   return (
     <Container className="resetpassword-wrapper">
-        <p>Please enter the email you used to register your account below to reset your password. An email with instructions and a link to reset your password will be sent to that email.</p>
-      <div className="col-md-6 shadow p-3 mb-5 bg-white rounded ">
+        <p>An email with instructions and a link to reset your password will be sent to that email. Please provide the right email used during registration</p>
+      <div className="col-md-6 shadow p-4 mb-5 bg-white rounded ">
         <Form>
           <Form.Group as={Row} controlId="email">
             <Form.Label column sm={2}>

@@ -1,14 +1,14 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import {AiOutlineControl} from 'react-icons/ai'
-import {FaMoneyBillAlt} from 'react-icons/fa'
-import {GrDocumentTime} from 'react-icons/gr'
+import { Container, Row, Col } from "react-bootstrap";
+import { AiOutlineControl } from "react-icons/ai";
+import { FaMoneyBillAlt } from "react-icons/fa";
+import { GrDocumentTime } from "react-icons/gr";
 import Jason from "../images/jason.jpg";
 
 const ContentSection = () => {
   return (
     <>
-      <Container fluid className="white-section">
+      <Container fluid className="gray-section">
         <Container>
           <h2 className="title">What is niSupport?</h2>
           <p>
@@ -21,7 +21,7 @@ const ContentSection = () => {
           </p>
         </Container>
       </Container>
-      <Container fluid className="gray-section">
+      <Container fluid className="white-section">
         <Container>
           <h2 className="title">niSupport is for everyone who creates music</h2>
           <Row>
@@ -31,7 +31,7 @@ const ContentSection = () => {
                 fans. Test new work in a supportive environment. Establish a
                 reliable, recurring revenue stream.
               </p>
-              <Button className="btn-custom mb-3"> Get Started</Button>
+              <a href="/" className="btn-custom link">Get Started</a>
             </Col>
             <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
@@ -39,12 +39,14 @@ const ContentSection = () => {
           </Row>
         </Container>
       </Container>
-      <Container fluid className="white-section">
+      <Container fluid className="gray-section">
         <Container>
           <h2 className="title">Why should musicians use membership?</h2>
           <Row>
             <Col md={4} className="card-items">
-              <span><FaMoneyBillAlt/></span>
+              <span>
+                <FaMoneyBillAlt />
+              </span>
               <h4>Predictable & sustainable revenue</h4>
               <p>
                 Monthly pledges means you know exactly what you're getting paid
@@ -52,44 +54,52 @@ const ContentSection = () => {
               </p>
             </Col>
             <Col md={4} className="card-items">
-              <span><AiOutlineControl/></span>
+              <span>
+                <AiOutlineControl />
+              </span>
               <h4>Retain full control</h4>
               <p>
-              Still want to run ads, do brand deals, or work with sponsors? Cool with us!
+                Still want to run ads, do brand deals, or work with sponsors?
+                Cool with us!
               </p>
             </Col>
             <Col md={4} className="card-items">
-              <span><GrDocumentTime/></span>
+              <span>
+                <GrDocumentTime />
+              </span>
               <h4>Your music, your schedule</h4>
               <p>
-              Posting tracks weekly? Waiting to release an album? No matter what, you call the shots.
+                Posting tracks weekly? Waiting to release an album? No matter
+                what, you call the shots.
               </p>
             </Col>
           </Row>
         </Container>
       </Container>
-      <Container fluid className="gray-section">
-        <Container style={{paddingTop: "3rem"}}>
+      <Container fluid className="white-section">
+        <Container >
           <Row>
-          <Col md={6} className="white-leftsection">
+            <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
             </Col>
             <Col md={6} className="white-leftsection">
-              <p style={{fontFamily: "Hi Melody", fontSize: "1.5rem"}}>
-              "Like all recording artists, I've kept my eye on what creative tools the internet might afford. Patreon is unique; it's a platform that interests me. I've spent an entire career traveling, coming to your towns to play music. Now I'm inviting you to my place."
+              <p style={{ fontFamily: "Hi Melody", fontSize: "2rem" }}>
+                "Like all recording artists, I've kept my eye on what creative
+                tools the internet might afford. Patreon is unique; it's a
+                platform that interests me. I've spent an entire career
+                traveling, coming to your towns to play music. Now I'm inviting
+                you to my place."
               </p>
             </Col>
-            
           </Row>
         </Container>
       </Container>
       <Container fluid className="call-to-action">
         <Container className="calltoaction-items">
           <h2 className="title">Ready to build your membership business?</h2>
-          <Button className="btn-custom">Get Stared</Button>
-        </Container>
+          <a href="/" className="btn-custom link">Get Stared</a>
+        </Container> 
       </Container>
-
     </>
   );
 };
