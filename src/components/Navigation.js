@@ -8,14 +8,14 @@ const Navigation = () => {
     <>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="/">
-          <img src={Logo} alt="logo" style={{ width: "200px", height: "70px"}}/>
+          <img src={Logo} alt="logo" style={{ width: "150px", height: "70px"}}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/">About</Nav.Link>
             <Nav.Link href="/contensection">Pricing</Nav.Link>
-            <Nav.Link href="/contensection">Community</Nav.Link>
+            <Nav.Link href="/welcomepage">Community</Nav.Link>
             
           </Nav>
           <Form inline>

@@ -212,3 +212,54 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.welcome-leftSide{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: solid 1px#FAF9F9;
+}
+.followers-wrapper{
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.followers-title{
+  text-align: center;
+  background-color: #FAF9F9;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.followers{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+ 
+}
+.welcome-rightSide{
+  border-left: solid 1px#FAF9F9 ;
+  padding: 0.5rem 1rem;
+}
+.timeline{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+.timeline-btn{
+  background-color: #21c7eb !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 20px !important;
+  padding: 0.5rem 2rem !important;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.timeline-btn:hover {
+  background-color: #25b7d4 !important;
+}

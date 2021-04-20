@@ -7,6 +7,7 @@ import Body from "./components/Body";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import PasswordReset from "./components/PasswordReset";
+import WelcomePage from "./components/artist/WelcomePage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" exact component={Register} ></Route>
         <Route path="/login" exact component={Login} ></Route>
         <Route path="/passwordreset" exact component={PasswordReset} ></Route>
+        <Route path="/welcomepage" exact component={WelcomePage} ></Route>
         <Route component={Error} ></Route>
       </Switch>
     </Router>
