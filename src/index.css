@@ -157,8 +157,26 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.footer-section{
+  padding-top: 1rem;
+}
+.footer-div {
+  padding-top: 2rem;
+}
+.footerlogo {
+  text-align: center;
+}
+.footer-menu {
+  /* padding: 1rem; */
+  display: flex;
+  justify-content: center;
+  font-family:'raleway';
+  font-weight: 500;
+
+  /* background-color: aquamarine; */
+}
 .social-links {
-  padding: 2rem;
+  padding-top: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,18 +188,7 @@ body {
   color: rgb(92, 91, 91);
   font-size: 1.5rem;
 }
-.footer-div {
-  padding-top: 2rem;
-}
-.footerlogo {
-  text-align: center;
-}
-.footer-menu {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  /* background-color: aquamarine; */
-}
+
 .copyright {
   text-align: center;
   padding: 1rem;

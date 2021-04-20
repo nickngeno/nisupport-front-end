@@ -1,12 +1,15 @@
 import React from "react";
 import {Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import {FaSearch} from 'react-icons/fa'
+import Logo from '../images/nisupport-logo.PNG'
 
 const Navigation = () => {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">niSupport</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src={Logo} alt="logo" style={{ width: "200px", height: "70px"}}/>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">

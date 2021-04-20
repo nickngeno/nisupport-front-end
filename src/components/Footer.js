@@ -8,7 +8,7 @@ import { FaYoutubeSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <Container fluid className="everyone-section">
+      <Container fluid className="footer-section">
         <Container className="footer-div">
           <Row>
             <Col>
