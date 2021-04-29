@@ -1,7 +1,11 @@
 import React from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import useForm from "../utils/useForm";
 
 const Register = () => {
+
+  const [values, handleChange,register] = useForm();
+  
   return (
     <Container className="register-wrapper">
       <div className="col-md-5 shadow p-3 mb-5 bg-white rounded ">
@@ -14,7 +18,7 @@ const Register = () => {
         >
           Sign up
         </h3>
-        <Form>
+        <Form onSubmit={register}>
           <Form.Group as={Row} controlId="name">
             <Form.Label column sm={2}>
               Name
@@ -23,7 +27,9 @@ const Register = () => {
               <Form.Control
                 type="text"
                 name="name"
+                value={values.name || ""}
                 placeholder="firstname lastname"
+                onChange={handleChange}
               />
             </Col>
           </Form.Group>
@@ -32,7 +38,13 @@ const Register = () => {
               Email
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="email" name="email" placeholder="Email" />
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={values.email || ""}
+                onChange={handleChange}
+              />
             </Col>
           </Form.Group>
 
@@ -45,18 +57,22 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="Password"
+                value={values.password || ""}
+                onChange={handleChange}
               />
             </Col>
           </Form.Group>
-          <Form.Group as={Row} controlId="password">
+          <Form.Group as={Row} controlId="confirmpassword">
             <Form.Label column sm={2}>
               Confirm Password
             </Form.Label>
             <Col sm={10}>
               <Form.Control
                 type="password"
-                name="password"
+                name="confirmpassword"
                 placeholder="Confirm Password"
+                value={values.confirmpassword || ""}
+                onChange={handleChange}
               />
             </Col>
           </Form.Group>

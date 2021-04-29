@@ -25,7 +25,7 @@ const WelcomePage = () => {
               </div>
               <div className="followers">
                 <span>10: </span>
-                <p> Supporter</p>
+                <p> Supporters</p>
               </div>
             </div>
           </Col>
@@ -49,11 +49,11 @@ const WelcomePage = () => {
           <Col sm={2} className="welcome-rightSide">
             <h5>Recent Posts</h5>
             <hr />
-            <div className="timeline">
-              <span className="timeline-btn">2021</span>
-              <span className="timeline-btn">2020</span>
-              <span className="timeline-btn">2019</span>
-            </div>
+            <ul className="timeline">
+              <li className="timeline-btn active">2021</li>
+              <li className="timeline-btn">2020</li>
+              <li className="timeline-btn">2019</li>
+            </ul>
           </Col>
         </Row>
       </Container>
