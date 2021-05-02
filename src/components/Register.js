@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import useForm from "../utils/useForm";
+import formValidation from '../utils/formValidation'
 
 const Register = () => {
 
-  const [values, handleChange,register] = useForm();
+  const [values, handleChange,handleRegister,errors] = useForm(formValidation);
   
   return (
     <Container className="register-wrapper">
@@ -18,7 +19,7 @@ const Register = () => {
         >
           Sign up
         </h3>
-        <Form onSubmit={register}>
+        <Form onSubmit={handleRegister}>
           <Form.Group as={Row} controlId="name">
             <Form.Label column sm={2}>
               Name
@@ -31,6 +32,7 @@ const Register = () => {
                 placeholder="firstname lastname"
                 onChange={handleChange}
               />
+              {errors.name && errors.name}
             </Col>
           </Form.Group>
           <Form.Group as={Row} controlId="email">
@@ -45,6 +47,7 @@ const Register = () => {
                 value={values.email || ""}
                 onChange={handleChange}
               />
+               {errors.email && errors.email}
             </Col>
           </Form.Group>
 
@@ -60,6 +63,7 @@ const Register = () => {
                 value={values.password || ""}
                 onChange={handleChange}
               />
+               {errors.password && errors.password}
             </Col>
           </Form.Group>
           <Form.Group as={Row} controlId="confirmpassword">
@@ -74,6 +78,7 @@ const Register = () => {
                 value={values.confirmpassword || ""}
                 onChange={handleChange}
               />
+              {errors.confirmpassword && errors.confirmpassword}
             </Col>
           </Form.Group>
           <Row>

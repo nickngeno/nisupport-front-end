@@ -1,24 +1,26 @@
 import {useState} from 'react'
 
-const useForm = () => {
+const useForm = (formValidation) => {
+    const [errors, setErrors] =useState({})
     const [values, setValues] = useState({
         name: "",
         email:"",
         password:"",
         confirmpassword:""
     })
+    
 
-    const register = (e) =>{
+    const handleRegister = (e) =>{
         e.preventDefault()
         console.log(values)
-        setValues({})
+        setErrors(formValidation(values))
     }
     const handleChange = (e) => {
         e.persist()
         setValues(values => ({...values, [e.target.name]: e.target.value}))
     }
 
-    return [values, handleChange,register]
+    return [values, handleChange,handleRegister,errors]
 }
 
 export default useForm
