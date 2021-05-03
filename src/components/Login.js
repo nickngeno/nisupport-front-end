@@ -4,30 +4,25 @@ import { Container, Form, Row, Col, Button } from "react-bootstrap";
 const Login = () => {
   return (
     <Container className="register-wrapper">
-      <div className="col-md-5 shadow p-3 mb-5 bg-white rounded ">
-        <h3
+      <h3
           style={{
             textAlign: "center",
-            paddingBottom: "2rem",
+            paddingBottom: "1rem",
             fontWeight: "bold",
           }}
         >
           Login
         </h3>
+      <div className="col-md-6 shadow p-5 mb-5 bg-white rounded ">
         <Form>
           <Form.Group as={Row} controlId="email">
-            <Form.Label column sm={2}>
-              Email
-            </Form.Label>
+              <Form.Label column sm={2}> Email </Form.Label>
             <Col sm={10}>
               <Form.Control type="email" name="email" placeholder="Email" />
             </Col>
           </Form.Group>
-
           <Form.Group as={Row} controlId="password">
-            <Form.Label column sm={2}>
-              Password
-            </Form.Label>
+           <Form.Label column sm={2}> Password </Form.Label>
             <Col sm={10}>
               <Form.Control
                 type="password"

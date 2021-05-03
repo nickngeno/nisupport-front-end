@@ -8,7 +8,7 @@ const Navigation = () => {
     <>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="/">
-          <img src={Logo} alt="logo" style={{ width: "150px", height: "70px"}}/>
+          <img src={Logo} alt="logo" style={{ width: "100px", height: "44px"}}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

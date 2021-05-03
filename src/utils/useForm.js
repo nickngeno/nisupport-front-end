@@ -12,8 +12,9 @@ const useForm = (formValidation) => {
 
     const handleRegister = (e) =>{
         e.preventDefault()
-        console.log(values)
         setErrors(formValidation(values))
+        console.log(values)
+        // setValues({})
     }
     const handleChange = (e) => {
         e.persist()

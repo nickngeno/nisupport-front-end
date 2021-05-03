@@ -1,24 +1,26 @@
 import React from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import useForm from "../utils/useForm";
-import formValidation from '../utils/formValidation'
+import formValidation from "../utils/formValidation";
 
 const Register = () => {
+  const [values, handleChange, handleRegister, errors] = useForm(
+    formValidation
+  );
 
-  const [values, handleChange,handleRegister,errors] = useForm(formValidation);
-  
   return (
     <Container className="register-wrapper">
-      <div className="col-md-5 shadow p-3 mb-5 bg-white rounded ">
-        <h3
-          style={{
-            textAlign: "center",
-            paddingBottom: "2rem",
-            fontWeight: "bold",
-          }}
-        >
-          Sign up
-        </h3>
+      <h3
+        style={{
+          textAlign: "center",
+          paddingBottom: "1rem",
+          paddingTop:"1rem",
+          fontWeight: "bold",
+        }}
+      >
+        Sign up
+      </h3>
+      <div className="col-md-6 shadow p-5 mb-5 bg-white rounded ">
         <Form onSubmit={handleRegister}>
           <Form.Group as={Row} controlId="name">
             <Form.Label column sm={2}>
@@ -29,10 +31,12 @@ const Register = () => {
                 type="text"
                 name="name"
                 value={values.name || ""}
-                placeholder="firstname lastname"
+                placeholder="Full name"
                 onChange={handleChange}
               />
-              {errors.name && errors.name}
+              <Form.Text>
+                {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+              </Form.Text>
             </Col>
           </Form.Group>
           <Form.Group as={Row} controlId="email">
@@ -47,10 +51,11 @@ const Register = () => {
                 value={values.email || ""}
                 onChange={handleChange}
               />
-               {errors.email && errors.email}
+              <Form.Text>
+                {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+              </Form.Text>
             </Col>
           </Form.Group>
-
           <Form.Group as={Row} controlId="password">
             <Form.Label column sm={2}>
               Password
@@ -63,7 +68,11 @@ const Register = () => {
                 value={values.password || ""}
                 onChange={handleChange}
               />
-               {errors.password && errors.password}
+              <Form.Text>
+                {errors.password && (
+                  <p style={{ color: "red" }}>{errors.password}</p>
+                )}
+              </Form.Text>
             </Col>
           </Form.Group>
           <Form.Group as={Row} controlId="confirmpassword">
@@ -78,12 +87,16 @@ const Register = () => {
                 value={values.confirmpassword || ""}
                 onChange={handleChange}
               />
-              {errors.confirmpassword && errors.confirmpassword}
+              <Form.Text>
+                {errors.password && (
+                  <p style={{ color: "red" }}>{errors.confirmpassword}</p>
+                )}
+              </Form.Text>
             </Col>
           </Form.Group>
           <Row>
             <Col className="col-md-4 offset-md-4">
-              <Button type="submit" className="btn-custom">
+              <Button type="submit" className="btn btn-primary btn-block">
                 Sign up
               </Button>
             </Col>

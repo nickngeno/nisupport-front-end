@@ -114,16 +114,20 @@ body {
 }
 .btn-custom {
   background-color: #21c7eb !important;
+  border-radius: 10px !important;
+  padding: 0.5rem 2rem !important;
   border: none !important;
   outline: none !important;
-  border-radius: 20px !important;
-  padding: 0.5rem 2rem !important;
   text-align: center;
   font-weight: bold;
   color: #fff;
 }
 .btn-custom:hover {
   background-color: #25b7d4 !important;
+}
+.btn-custom:active {
+  border: none !important;
+  outline: none !important;
 }
 .link {
   text-decoration: none !important;
