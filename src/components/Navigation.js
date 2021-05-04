@@ -16,7 +16,6 @@ const Navigation = () => {
             <Nav.Link href="/">About</Nav.Link>
             <Nav.Link href="/contensection">Pricing</Nav.Link>
             <Nav.Link href="/welcomepage">Community</Nav.Link>
-            
           </Nav>
           <Form inline>
             <FormControl type="text" placeholder="Search artist" className="mr-sm-2" />

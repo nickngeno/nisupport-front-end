@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 import Nick from "../../images/Nick.png";
+import Post from "../Post";
 
 const WelcomePage = () => {
   return (
@@ -20,11 +21,15 @@ const WelcomePage = () => {
             <div className="followers-wrapper">
               <span className="followers-title">You have : </span>
               <div className="followers">
-                <span>20:</span>
+                <p>
+                  <strong>20</strong>:{" "}
+                </p>
                 <p> Followers</p>
               </div>
               <div className="followers">
-                <span>10: </span>
+                <p>
+                  <strong>10</strong>:{" "}
+                </p>
                 <p> Supporters</p>
               </div>
             </div>
@@ -44,6 +49,11 @@ const WelcomePage = () => {
               <Col sm={4}>
                 <Button className="btn-custom"> Create Post</Button>
               </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Post />
+              </Col><hr/>
             </Row>
           </Col>
           <Col sm={2} className="welcome-rightSide">

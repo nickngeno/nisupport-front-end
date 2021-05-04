@@ -10,18 +10,21 @@ const useForm = (formValidation) => {
     })
     
 
-    const handleRegister = (e) =>{
+    const submitRegister = (e) =>{
         e.preventDefault()
         setErrors(formValidation(values))
-        console.log(values)
+        // console.log(values)
+        console.log(errors)
         // setValues({})
     }
-    const handleChange = (e) => {
+    const handleregisterChange = (e) => {
         e.persist()
         setValues(values => ({...values, [e.target.name]: e.target.value}))
     }
 
-    return [values, handleChange,handleRegister,errors]
+    
+
+    return [values, handleregisterChange,submitRegister, errors]
 }
 
 export default useForm
