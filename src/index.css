@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
 * {
   margin: 0;
   padding: 0;
@@ -161,21 +163,25 @@ body {
 }
 .footer-section {
   padding-top: 1rem;
+  margin-top: 2rem;
+  /* background-color: #000; */
+  background-color: #ececec;
 }
 .footer-div {
   padding-top: 2rem;
 }
 .footerlogo {
-  text-align: center;
+  /* background-color: teal; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.footer-menu {
+.footer-menu span {
   /* padding: 1rem; */
   display: flex;
   justify-content: center;
-  font-family: "raleway";
   font-weight: 500;
-
-  /* background-color: aquamarine; */
+  font-family: "muli";
 }
 .social-links {
   padding-top: 1.5rem;
@@ -276,6 +282,6 @@ body {
 .postcard {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background-color: rgb(139, 185, 185);
+  /* background-color: rgb(216, 240, 240); */
   border-bottom: solid 1px #d8d6d6;
 }

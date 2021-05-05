@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 import Nick from "../../images/Nick.png";
+import Footer from "../Footer";
 import Post from "../Post";
 
 const WelcomePage = () => {
@@ -67,6 +68,7 @@ const WelcomePage = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </>
   );
 };

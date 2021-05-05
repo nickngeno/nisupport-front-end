@@ -4,6 +4,7 @@ import { FiInstagram } from "react-icons/fi";
 import { GrFacebook } from "react-icons/gr";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
+import Logo from '../images/logo1.png'
 
 const Footer = () => {
   return (
@@ -21,7 +22,9 @@ const Footer = () => {
                 </Col>
               </Row>
             </Col>
-            <Col className="footerlogo">Logo</Col>
+            <Col className="footerlogo">
+              <img src={Logo} alt="logo" style={{width:"150px", height:"auto"}} />
+            </Col>
             <Col>
               <Row>
                 <Col className="footer-menu">
@@ -49,7 +52,7 @@ const Footer = () => {
             </a>
           </Row>
           <Row className="copyright">
-            <Col>&copy; Copyright niSupport 2021 </Col>
+            <Col>&copy; Copyright niSupport {new Date().getFullYear()} </Col>
           </Row>
         </Container>
       </Container>
