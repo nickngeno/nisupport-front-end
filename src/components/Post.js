@@ -8,7 +8,7 @@ const Post = () => {
     <>
       <Row>
         <Col className="postcard" style={{ position: "relative" }}>
-          <CgMore style={{ position: "absolute", top: "0px", right: "1rem" ,fontSize:"1.5rem" }} />
+          <CgMore style={{ position: "absolute", top: "5px", right: "1rem" ,fontSize:"1.5rem" ,cursor:"pointer"}} />
           <Card>
             <Card.Img
               src={addPost}
@@ -18,7 +18,6 @@ const Post = () => {
             <Card.Body>
               <Card.Title>Post 1</Card.Title>
               <Card.Text>
-                {" "}
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa,
                 quis. Tempore ducimus dolorem pariatur. Deleniti in quia libero
                 ex sunt id ducimus ea incidunt eveniet facere! Ullam eligendi
@@ -30,9 +29,9 @@ const Post = () => {
           </Card>
         </Col>
       </Row>
-
       <Row >
         <Col className="postcard">
+        <CgMore style={{ position: "absolute", top: "5px", right: "1rem" ,fontSize:"1.5rem" ,cursor:"pointer"}} />
           <Card>
             <Card.Img
               src={contemplating}

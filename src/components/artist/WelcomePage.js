@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Nav, Button } from "react-bootstrap";
+import { Container, Row, Col, Nav, Button, Card ,ListGroup,ListGroupItem} from "react-bootstrap";
 import Nick from "../../images/Nick.png";
 import Footer from "../Footer";
 import Post from "../Post";
@@ -9,62 +9,73 @@ const WelcomePage = () => {
     <>
       <Container>
         <Row className="mt-5">
-          <Col sm={2} className="welcome-leftSide">
-            <img
-              src={Nick}
-              alt="avatar"
-              style={{
-                width: "150px",
-                borderRadius: "50%",
-                paddingTop: "1rem",
-              }}
-            />
-            <div className="followers-wrapper">
-              <span className="followers-title">You have : </span>
-              <div className="followers">
-                <p>
-                  <strong>20</strong>:{" "}
-                </p>
-                <p> Followers</p>
-              </div>
-              <div className="followers">
-                <p>
-                  <strong>10</strong>:{" "}
-                </p>
-                <p> Supporters</p>
-              </div>
-            </div>
+          <Col sm={3}>
+            <Card >
+              <Card.Header></Card.Header>
+              <Card.Img
+                variant="top"
+                src={Nick}
+                alt="avatar"
+                style={{
+                  margin:"0 auto",
+                  width: "100px",
+                  borderRadius: "50%",
+                  paddingTop: "1rem",
+                  
+                }}
+              />
+              <Card.Body className="profileCard">
+                <Card.Title>Nicholas Ngeno</Card.Title>
+                <Card.Subtitle>Musician</Card.Subtitle>
+              </Card.Body><hr/>
+              <Card.Body className="profileCard-stats">
+                <span>20</span>
+                <Card.Text>Followers</Card.Text>
+              </Card.Body>
+              <Card.Body className="profileCard-stats">
+                <span>10</span>
+                <Card.Text>Supporters</Card.Text>
+              </Card.Body>
+            </Card>
           </Col>
-          <Col sm={8} className="welcome-middleSide">
+          <Col sm={7} className="welcome-middleSide">
             <Row>
-              <Col sm={8}>
-                <Nav justify variant="tabs" bg="light" defaultActiveKey="/home">
-                  <Nav.Item>
-                    <Nav.Link href="/home">All</Nav.Link>
-                  </Nav.Item>
-                  <Nav.Item>
-                    <Nav.Link eventKey="link-1">Recent</Nav.Link>
-                  </Nav.Item>
-                </Nav>
-              </Col>
-              <Col sm={4}>
-                <Button className="btn-custom"> Create Post</Button>
+              <Col sm={12} className="pt-2">
+                <Card>
+                  <Card.Header>
+                    <Nav
+                      justify
+                      variant="tabs"
+                      bg="light"
+                      defaultActiveKey="/#"
+                    >
+                      <Nav.Item>
+                        <Nav.Link href="/#">All</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="link-1">Recent</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Button className="btn btn-custom"> Create Post</Button>
+                      </Nav.Item>
+                    </Nav>
+                  </Card.Header>
+                </Card>
               </Col>
             </Row>
-            <Row>
-              <Col>
-                <Post />
-              </Col><hr/>
-            </Row>
+            <Col>
+              <Post />
+            </Col>
           </Col>
-          <Col sm={2} className="welcome-rightSide">
-            <h5>Recent Posts</h5>
-            <hr />
-            <ul className="timeline">
-              <li className="timeline-btn active">2021</li>
-              <li className="timeline-btn">2020</li>
-              <li className="timeline-btn">2019</li>
-            </ul>
+          <Col sm={2} className="recentpostsCard">
+            <Card>
+              <Card.Header> Recent Posts</Card.Header>
+              <ListGroup className="list-group-flush p-3">
+                <ListGroupItem className="timeline-btn">2021</ListGroupItem>
+                <ListGroupItem className="timeline-btn">2020</ListGroupItem>
+                <ListGroupItem className="timeline-btn">2019</ListGroupItem>
+              </ListGroup>
+            </Card>
           </Col>
         </Row>
       </Container>

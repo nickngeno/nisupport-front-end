@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FiInstagram } from "react-icons/fi";
-import { GrFacebook } from "react-icons/gr";
+import { FaFacebook } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
 import Logo from '../images/logo1.png'
@@ -15,20 +15,20 @@ const Footer = () => {
             <Col>
               <Row>
                 <Col className="footer-menu">
-                  <span>Community</span>
+                  <span>Company</span>
                 </Col>
                 <Col className="footer-menu">
-                  <span>Company</span>
+                  <span>Community</span>
                 </Col>
               </Row>
             </Col>
             <Col className="footerlogo">
-              <img src={Logo} alt="logo" style={{width:"150px", height:"auto"}} />
+              <img src={Logo} alt="logo" style={{width:"100px", height:"auto"}} />
             </Col>
             <Col>
               <Row>
                 <Col className="footer-menu">
-                  <span>Help desk</span>
+                  <span>Pricing</span>
                 </Col>
                 <Col className="footer-menu">
                   <span>Resources</span>
@@ -36,13 +36,13 @@ const Footer = () => {
               </Row>
             </Col>
           </Row>
-          <hr />
+          <hr/>
           <Row className="social-links">
             <a href="/" target="_blank">
               <FaTwitterSquare />
             </a>
             <a href="/" target="_blank">
-              <GrFacebook />
+              <FaFacebook />
             </a>
             <a href="/" target="_blank">
               <FiInstagram />
@@ -52,7 +52,7 @@ const Footer = () => {
             </a>
           </Row>
           <Row className="copyright">
-            <Col>&copy; Copyright niSupport {new Date().getFullYear()} </Col>
+            <Col>&copy; Copyright niSupport {new Date().getFullYear()} 🦋</Col>
           </Row>
         </Container>
       </Container>
