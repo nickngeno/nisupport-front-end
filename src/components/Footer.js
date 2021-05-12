@@ -4,7 +4,7 @@ import { FiInstagram } from "react-icons/fi";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
-import Logo from '../images/logo1.png'
+import Logo from '../images/logo-V3.png'
 
 const Footer = () => {
   return (

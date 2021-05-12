@@ -6,21 +6,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
 }
-body {
-  font-family: "Raleway", sans-serif;
-}
+
 .title {
   text-align: center;
   padding: 2rem;
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
+  color: #222;
 }
 .hero-section {
-  background-color: #000;
+  background-image: url("../src/images/happy_music.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
-  height: 500px;
+  min-height: 500px;
   display: flex;
 }
 .herowrapper {
@@ -32,29 +36,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  color: rgb(226, 226, 226);
+  justify-content: space-between;
 }
 
-.heroRight {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.heroRight img {
-  width: 250px;
-  height: auto;
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 767px) {
   .herowrapper {
     padding-top: 2rem;
   }
-  .heroRight img {
-    display: none;
+  .heroLeft .title {
+    color: #fff;
   }
-}
+  .hero-section {
 
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    color: #fff;
+  }
+
+}
 .white-section {
   background-color: #fff;
   min-height: 500px;
@@ -81,7 +79,18 @@ body {
   font-size: 2rem;
   text-align: center;
 }
-
+.gray-section {
+  background-color: #ececec;
+  min-height: 450px;
+  padding-top: 2rem;
+}
+.gray-section img {
+  width: 300px;
+  height: auto;
+}
+.gray-section p {
+  font-size: 1.25rem;
+}
 @media screen and (max-width: 650px) {
   .title {
     text-align: center;
@@ -98,19 +107,6 @@ body {
   .gray-section {
     padding-bottom: 2rem;
   }
-}
-.gray-section {
-  background-color: #ececec;
-  min-height: 500px;
-  padding-top: 2rem;
-}
-.gray-section img {
-  width: 300px;
-  height: auto;
-}
-.gray-section p {
-  text-align: center;
-  font-size: 1.25rem;
 }
 .btn-custom {
   background-color: #21c7eb !important;
@@ -134,9 +130,8 @@ body {
 }
 .card-items {
   display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
 }
 
 @media screen and (max-width: 650px) {
@@ -234,7 +229,7 @@ body {
   border-radius: 5px;
 }
 .recentpostsCard {
-  /* padding: 0.5rem 1rem; */
+  padding: 0;
 }
 
 .timeline {
@@ -267,4 +262,7 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: solid 1px #d8d6d6;
+}
+.icon{
+  font-size: 2rem;
 }

@@ -11,7 +11,6 @@ const WelcomePage = () => {
         <Row className="mt-5">
           <Col sm={3}>
             <Card >
-              <Card.Header></Card.Header>
               <Card.Img
                 variant="top"
                 src={Nick}

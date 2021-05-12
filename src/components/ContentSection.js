@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, CardDeck, Card } from "react-bootstrap";
 import { AiOutlineControl } from "react-icons/ai";
 import { FaMoneyBillAlt } from "react-icons/fa";
 import { GrDocumentTime } from "react-icons/gr";
@@ -31,7 +31,9 @@ const ContentSection = () => {
                 fans. Test new work in a supportive environment. Establish a
                 reliable, recurring revenue stream.
               </p>
-              <a href="/" className="btn-custom link">Get Started</a>
+              <a href="/" className="btn-custom link">
+                Get Started
+              </a>
             </Col>
             <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
@@ -42,42 +44,60 @@ const ContentSection = () => {
       <Container fluid className="gray-section">
         <Container>
           <h2 className="title">Why should musicians use membership?</h2>
-          <Row>
-            <Col md={4} className="card-items">
-              <span>
-                <FaMoneyBillAlt />
-              </span>
-              <h4>Predictable & sustainable revenue</h4>
-              <p>
-                Monthly pledges means you know exactly what you're getting paid
-                each month.
-              </p>
-            </Col>
-            <Col md={4} className="card-items">
-              <span>
-                <AiOutlineControl />
-              </span>
-              <h4>Retain full control</h4>
-              <p>
-                Still want to run ads, do brand deals, or work with sponsors?
-                Cool with us!
-              </p>
-            </Col>
-            <Col md={4} className="card-items">
-              <span>
-                <GrDocumentTime />
-              </span>
-              <h4>Your music, your schedule</h4>
-              <p>
-                Posting tracks weekly? Waiting to release an album? No matter
-                what, you call the shots.
-              </p>
-            </Col>
-          </Row>
+          <CardDeck>
+            <Card className=" shadow">
+              <Row className=" card-items align-items-center p-3">
+                <Col sm={2} >
+                  <FaMoneyBillAlt className="icon" />
+                </Col>
+                <Col  sm={10} >
+                  <Card.Title>Predictable & sustainable revenue</Card.Title>
+                </Col>
+              </Row>
+              <Card.Body>
+                <Card.Text>
+                  Monthly pledges means you know exactly what you're getting
+                  paid each month.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="shadow">
+              <Row className=" card-items align-items-center p-3">
+                <Col  sm={2}>
+                  <AiOutlineControl className="icon" />
+                </Col>
+                <Col  sm={10}>
+                  <Card.Title>Retain full control</Card.Title>
+                </Col>
+              </Row>
+              <Card.Body>
+                <Card.Text>
+                  Still want to run ads, do brand deals, or work with sponsors?
+                  Cool with us!
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            <Card className="shadow">
+              <Row className=" card-items align-items-center p-3">
+                <Col sm={2}>
+                  <GrDocumentTime className="icon" />
+                </Col>
+                <Col sm={10}>
+                  <Card.Title>Your music, your schedule</Card.Title>
+                </Col>
+              </Row>
+              <Card.Body>
+                <Card.Text>
+                  Posting tracks weekly? Waiting to release an album? No matter
+                  what, you call the shots.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </CardDeck>
         </Container>
       </Container>
       <Container fluid className="white-section">
-        <Container >
+        <Container>
           <Row>
             <Col md={6} className="white-leftsection">
               <img src={Jason} alt="" />
@@ -97,8 +117,10 @@ const ContentSection = () => {
       <Container fluid className="call-to-action">
         <Container className="calltoaction-items">
           <h2 className="title">Ready to build your membership business?</h2>
-          <a href="/" className="btn-custom link">Get Stared</a>
-        </Container> 
+          <a href="/" className="btn-custom link">
+            Get Stared
+          </a>
+        </Container>
       </Container>
     </>
   );

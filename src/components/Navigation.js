@@ -1,7 +1,7 @@
 import React from "react";
 import {Navbar, Nav, Form, FormControl } from "react-bootstrap";
 import {FaSearch} from 'react-icons/fa'
-import Logo from '../images/logo1.png'
+import Logo from '../images/logo-V3.png'
 
 const Navigation = () => {
   return (

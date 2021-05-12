@@ -1,12 +1,10 @@
 import React from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import useForm from "../utils/useForm";
-import {formValidation} from "../utils/formValidation";
+import {validateRegister} from "../utils/formValidation";
 
 const Register = () => {
-  const [values, handleregisterChange, submitRegister, errors] = useForm(
-    formValidation
-  );
+  const {values, handleregisterChange, submitRegister, errors} = useForm(validateRegister);
 
   return (
     <Container className="register-wrapper">
@@ -20,14 +18,14 @@ const Register = () => {
       >
         Sign up
       </h3>
-      <div className="col-md-6 shadow p-5 mb-5 bg-white rounded ">
+      <div className="col-sm-12 col-md-8 col-lg-6 shadow p-5 mb-5 bg-white rounded ">
         <Form onSubmit={submitRegister}>
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
             <Form.Control
               type="text"
               name="name"
-              value={values.name || ""}
+              value={values.name}
               placeholder="Full name"
               onChange={handleregisterChange}
             />
@@ -41,7 +39,7 @@ const Register = () => {
               type="email"
               name="email"
               placeholder="Email"
-              value={values.email || ""}
+              value={values.email}
               onChange={handleregisterChange}
             />
             <Form.Text>
@@ -55,7 +53,7 @@ const Register = () => {
               type="password"
               name="password"
               placeholder="Password"
-              value={values.password || ""}
+              value={values.password}
               onChange={handleregisterChange}
             />
             <Form.Text>
@@ -71,7 +69,7 @@ const Register = () => {
               type="password"
               name="confirmpassword"
               placeholder="Confirm Password"
-              value={values.confirmpassword || ""}
+              value={values.confirmpassword}
               onChange={handleregisterChange}
             />
             <Form.Text>
@@ -81,8 +79,8 @@ const Register = () => {
             </Form.Text>
           </Form.Group>
           <Row>
-            <Col className="col-md-4 offset-md-4">
-              <Button type="submit" className="btn btn-custom btn-block">
+            <Col className="col-sm-12 col-md-6  offset-md-3">
+              <Button type="submit" className="btn btn-custom btn-block "> 
                 Sign up
               </Button>
             </Col>
