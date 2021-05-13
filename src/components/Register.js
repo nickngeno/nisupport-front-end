@@ -2,11 +2,13 @@ import React from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import useForm from "../utils/useForm";
 import {validateRegister} from "../utils/formValidation";
+import Footer from "./Footer";
 
 const Register = () => {
   const {values, handleregisterChange, submitRegister, errors} = useForm(validateRegister);
 
   return (
+    <>
     <Container className="register-wrapper">
       <h3
         style={{
@@ -18,7 +20,7 @@ const Register = () => {
       >
         Sign up
       </h3>
-      <div className="col-sm-12 col-md-8 col-lg-6 shadow p-5 mb-5 bg-white rounded ">
+      <div className="col-sm-12 col-md-8 col-lg-6 shadow p-5 mb-3 bg-white rounded ">
         <Form onSubmit={submitRegister}>
           <Form.Group controlId="name">
             <Form.Label>Name</Form.Label>
@@ -93,6 +95,8 @@ const Register = () => {
         </p>
       </Row>
     </Container>
+    <Footer />
+    </>
   );
 };
 

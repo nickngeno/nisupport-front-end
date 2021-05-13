@@ -11,16 +11,18 @@ const WelcomePage = () => {
         <Row className="mt-5">
           <Col sm={3}>
             <Card >
+              <Card.Header></Card.Header>
               <Card.Img
                 variant="top"
                 src={Nick}
                 alt="avatar"
                 style={{
-                  margin:"0 auto",
+                  margin:"auto",
+                  marginTop: "-2rem",
                   width: "100px",
                   borderRadius: "50%",
                   paddingTop: "1rem",
-                  
+                  overflow: "hidden"
                 }}
               />
               <Card.Body className="profileCard">

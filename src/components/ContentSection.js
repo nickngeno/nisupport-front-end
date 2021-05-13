@@ -105,7 +105,7 @@ const ContentSection = () => {
             <Col md={6} className="white-leftsection">
               <p style={{ fontFamily: "Hi Melody", fontSize: "2rem" }}>
                 "Like all recording artists, I've kept my eye on what creative
-                tools the internet might afford. Patreon is unique; it's a
+                tools the internet might afford. niSupport is unique; it's a
                 platform that interests me. I've spent an entire career
                 traveling, coming to your towns to play music. Now I'm inviting
                 you to my place."
